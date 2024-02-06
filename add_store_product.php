@@ -1,20 +1,6 @@
 <?php
 $conn = new mysqli("localhost","root","","store_db");
-//require_once('choice_table');
-function data_list($tablename,$col1,$col2)
-{
-$conn = new mysqli("localhost","root","","store_db");
-$sql = "SELECT * FROM $tablename";
-$query=$conn->query($sql);
-
-	while($data=mysqli_fetch_assoc($query))
-	{
-		$data_id= $data[$col1];
-		$data_name= $data[$col2];
-		echo "<option value='$data_id'>$data_name</option>";
-	}
-}
-data_list('product','product_id','product_name');
+require_once('myfunction.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,10 +9,9 @@ data_list('product','product_id','product_name');
 if (isset($_POST['submit']))
 {
 	//$product_id=$_POST['product_id'];
-	$store_product_name=$_POST['store_product_name'];
-	$store_product_quantity=$_POST['store_product_quantity'];
-	
-	$store_product_entrydate=$_POST['store_product_entrydate'];
+	$store_product_name   		=$_POST['store_product_name'];
+	$store_product_quantity		=$_POST['store_product_quantity'];
+	$store_product_entrydate	=$_POST['store_product_entrydate'];
 	
 	$sql2 = "INSERT INTO store_product(store_product_name,store_product_quantity,store_product_entrydate) VALUES ('$store_product_name','$store_product_quantity','$store_product_entrydate')";
 	
@@ -37,7 +22,7 @@ if (isset($_POST['submit']))
 		{
 		echo "Store Product Inserted";
 		}
-	
+		
 	}
 }
 
@@ -59,7 +44,7 @@ if (isset($_POST['submit']))
   <label for="store_product_quantity">Store product Quantitiy:</label><br>
   <input type="text" id="store_product_quantity" name="store_product_quantity" ><br>
   
-  <label for="store_product_entrydate">product Entry Date:</label><br>
+  <label for="store_product_entrydate">Stroe product Entry Date:</label><br>
   <input type="date" id="store_product_entrydate" name="store_product_entrydate" ><br><br>
   
   <input type="submit" value="Submit" name="submit">

@@ -10,6 +10,7 @@ $conn = new mysqli("localhost","root","","store_db");
 
 	
 <?php
+	//store_product table has no product_name field this is why this code of lines
 	$sql1 = "SELECT * FROM product";
 	$query1=$conn->query($sql1);
 	$data_list= array();
@@ -19,7 +20,7 @@ $conn = new mysqli("localhost","root","","store_db");
 		$product_name=$data1['product_name'];
 		$data_list[$product_id]=$product_name; 
 	}
-	
+	// display data from store_product table
 	$sql = "SELECT * FROM store_product";
 	$query=$conn->query($sql);
 	echo "<table border='1'>
