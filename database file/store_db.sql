@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2024 at 05:24 PM
+-- Generation Time: Feb 13, 2024 at 06:13 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -118,7 +118,7 @@ CREATE TABLE `store_product` (
 
 INSERT INTO `store_product` (`store_product_id`, `store_product_name`, `store_product_quantity`, `store_product_entrydate`) VALUES
 (1, 6, 10, '2024-01-31'),
-(2, 6, 100, '2024-01-31'),
+(2, 6, 99, '2024-01-31'),
 (3, 6, 11, '2024-01-31'),
 (4, 6, 98, '2024-01-31'),
 (5, 18, 1, '2024-02-06'),

@@ -43,7 +43,7 @@ if (isset($_POST['submit']))
 
 ?>
 <head>
-<title>Add spend product Form</title>
+<title>spend product</title>
 </head>
 <h2>Add spend product</h2>
 
